@@ -1,0 +1,45 @@
+<div class="card text-center my-3 font-SmackBoom">
+  <div class="card-title  text-black mt-3">
+    <H4 class="atribute-color-text"><b>Vote for your favorite superhero!!</b></H4>
+  </div>
+  <div class="row" *ngFor="let heroRow of chunkArray(heroesList,3)">
+    <div class="d-flex flex-wrap">
+      <div class="card-body col-sm-4 col-md-3 col-lg-2 p-3 flex-grow-1" *ngFor="let hero of heroRow">
+        <h5 class="atribute-color-text"><b>{{hero.alias}}</b></h5>
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="{{hero.image}}" class="img-fluid" alt="superhero">
+        </div>
+        <div class="my-2 text-left">
+          <button class="btn btn-rounded btn-primary" type="button" data-bs-toggle="modal"
+            data-bs-target="#modalSaveVote" (click)="openModal(hero.alias)">Vote</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalSaveVote" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white text-center">
+        <h1 class="modal-title fs-5 font-SmackBoom " id="exampleModalLabel">¿Are you sure to vote for {{actualHero.alias}}?</h1>
+      </div>
+      <div class="modal-body img-modal" style="background-image: url({{actualHero.image}});">
+        <form>
+          <div class="form-group">
+            <label class="font-SmackBoom atribute-color-text" for="username">Username (Required):</label>
+            <input type="text" class="form-control mb-3" id="username" name="username" required [(ngModel)]="newVote.username"/>
+
+            <label class="font-SmackBoom atribute-color-text" for="comentary">Comentary (optional):</label>
+            <textarea class="form-control" style="resize: none;" id="comentary" name="comentary" [(ngModel)]="newVote.comentary"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer font-SmackBoom" style="border-top: none;">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="saveHeroVote(actualHero.alias)">Save vote</button>
+      </div>
+    </div>
+  </div>
+</div>

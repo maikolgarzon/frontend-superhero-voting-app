@@ -1,0 +1,13 @@
+.atribute-color-text{
+    color: #154c79;
+}
+
+.border-comentary{
+    border: 1px solid #154c79; /* Cambia el color a tu preferencia */
+    border-radius: 5px;
+    background-color: #f8f9fa; /* Cambia el color a tu preferencia */
+}
+
+.font-small{
+    font-size: x-small;
+}

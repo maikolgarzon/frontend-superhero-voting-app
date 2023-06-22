@@ -1,0 +1,38 @@
+html{
+    position: relative;
+    min-height: 100%;
+   
+}
+
+.font-SmackBoom {
+    font-family: 'SmackBoom', Times, serif;
+}
+  
+body{
+    margin-bottom: 60px;
+    background-image: url(assets/resources/img/wallpapper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.justify-text{
+    text-align: justify;
+}
+
+.right-text{
+    text-align: right;
+}
+  
+@font-face {
+    font-family: 'SmackBoom';
+    src: url(assets/bootstrap/css/SmackBoom.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manga';
+    src: url(assets/bootstrap/css/mangat.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

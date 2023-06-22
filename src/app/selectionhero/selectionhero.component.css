@@ -1,0 +1,22 @@
+.img-fluid {
+    height: 300px;
+    width: 250px;
+}
+
+img {
+    border: 2px solid black;
+}
+
+.form-control {
+    border-width: 4px;
+    border-style: solid;
+}
+
+.atribute-color-text {
+    color: #154c79;
+}
+
+.img-modal {
+    filter: grayscale(100%);
+    background-size: cover;
+}
